@@ -15,6 +15,9 @@ A romantic, interactive birthday tribute website created for Medha by Zafar.
 - Vintage envelope animation with an interactive love letter
 - Responsive layout optimized for iPhone-sized screens
 
+## Run URL 
+https://ms12871.github.io/wife-birthday/
+
 ## Run locally
 
 From this folder, start a local web server:
