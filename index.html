@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, Medha ✨</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <div class="rose-petals" aria-hidden="true"></div>
+    <div class="balloon-layer" aria-hidden="true"></div>
+    <div class="floating-hearts" aria-hidden="true">
+      <span class="heart heart-one">♥</span>
+      <span class="heart heart-two">♥</span>
+      <span class="heart heart-three">♥</span>
+    </div>
+
+    <div id="welcome-modal" class="modal-overlay">
+      <div class="modal-card cinematic-card">
+        <span class="sparkle-badge">FOR MY MEDHA • JULY 27 • 15 OCT 2026</span>
+        <h1>Happy Birthday, My Love</h1>
+        <p>
+          Before I met you, life was beautiful but incomplete. After I found you, my world became
+          softer, warmer, and full of forever. Loving you was the best decision I have ever made.
+        </p>
+        <button id="open-btn" class="btn-primary" aria-label="Open the birthday gift">
+          <span>✨ Open My Heart</span>
+        </button>
+      </div>
+    </div>
+
+    <button id="music-toggle" class="music-pill hidden" aria-label="Toggle birthday song">
+      <span class="disc-icon">🎵</span>
+      <span id="music-status">Replay Happy Birthday</span>
+    </button>
+
+    <button id="love-letter-btn" class="love-letter-btn" aria-label="Open vintage love letter">
+      <span>✉</span>
+      Open My Love Letter
+    </button>
+
+    <audio id="bg-audio" preload="auto" loop></audio>
+
+    <main id="main-content" class="content-hidden">
+      <header class="hero">
+        <h1 class="hero-title">Happy Birthday, <span class="highlight">Medha</span></h1>
+        <p class="hero-subtitle">
+          You are my favorite person, my safe place, and the most beautiful chapter in my life.
+          Thank you for being the love I never knew I needed until I found you.
+        </p>
+      </header>
+
+      <section class="section story-section">
+        <div class="section-header">
+          <span class="tag">OUR STORY</span>
+          <h2>Our Favorite Moments</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="memory-card">
+            <div class="card-img-wrapper">
+              <img src="assets/converted/IMG_4549.jpg" alt="Our beautiful memory 1" />
+            </div>
+            <div class="card-body">
+              <span class="card-date">The Beginning</span>
+              <h3>When I Found You</h3>
+              <p>
+                I still remember the moment everything changed. Your smile felt like home, and my
+                heart knew it had finally found its person.
+              </p>
+            </div>
+          </div>
+
+          <div class="memory-card">
+            <div class="card-img-wrapper">
+              <img src="assets/converted/IMG_4550.jpg" alt="Our beautiful memory 2" />
+            </div>
+            <div class="card-body">
+              <span class="card-date">Our Love</span>
+              <h3>Everything Feels Better With You</h3>
+              <p>
+                From the quiet moments to the unforgettable memories, every second with you feels
+                like a beautiful promise.
+              </p>
+            </div>
+          </div>
+
+          <div class="memory-card">
+            <div class="card-img-wrapper">
+              <img src="assets/converted/IMG_4918.jpg" alt="Our beautiful memory 3" />
+            </div>
+            <div class="card-body">
+              <span class="card-date">Forever</span>
+              <h3>My Favorite Person</h3>
+              <p>
+                I choose you in every lifetime, in every season, in every dream. You are my forever
+                and my favorite blessing.
+              </p>
+            </div>
+          </div>
+
+          <div class="memory-card">
+            <div class="card-img-wrapper">
+              <img src="assets/converted/IMG_5024.jpg" alt="Our beautiful memory 4" />
+            </div>
+            <div class="card-body">
+              <span class="card-date">Sweetest Days</span>
+              <h3>The Magic of Us</h3>
+              <p>
+                The way you make life softer, brighter, and more meaningful is the kind of love I
+                never want to lose.
+              </p>
+            </div>
+          </div>
+
+          <div class="memory-card">
+            <div class="card-img-wrapper">
+              <img src="assets/IMG_5103.JPG" alt="Couple standing together" />
+            </div>
+            <div class="card-body">
+              <span class="card-date">Always</span>
+              <h3>My Love, My Home</h3>
+              <p>
+                With you, even the smallest moments feel full of warmth, joy, and the promise of a
+                lifetime together.
+              </p>
+            </div>
+          </div>
+
+          <div class="memory-card">
+            <div class="card-img-wrapper">
+              <img src="assets/IMG_5104.JPG" alt="Couple by piano" />
+            </div>
+            <div class="card-body">
+              <span class="card-date">Our Story</span>
+              <h3>Every Chapter Feels Romantic</h3>
+              <p>
+                You are the reason my world feels deeper, calmer, and more beautiful every single
+                day.
+              </p>
+            </div>
+          </div>
+
+          <div class="memory-card">
+            <div class="card-img-wrapper">
+              <img src="assets/IMG_5105.JPG" alt="Couple walking together" />
+            </div>
+            <div class="card-body">
+              <span class="card-date">Endless Love</span>
+              <h3>Always Choosing You</h3>
+              <p>
+                In every season, in every dream, I will keep choosing you. You are my favorite place
+                to be.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section timeline-section">
+        <div class="section-header">
+          <span class="tag">THEN & NOW</span>
+          <h2>From the beginning to forever</h2>
+        </div>
+
+        <div class="timeline-grid">
+          <div class="timeline-card before">
+            <span class="timeline-tag">Before You</span>
+            <h3>Life was beautiful, but my heart was still waiting.</h3>
+            <p>
+              I didn’t know love could feel this soft, this steady, and this honest until I found
+              you.
+            </p>
+            <img src="assets/converted/IMG_4549.jpg" alt="Before us" />
+          </div>
+
+          <div class="timeline-card after">
+            <span class="timeline-tag">Now</span>
+            <h3>Now, every day feels warmer because you are in it.</h3>
+            <p>
+              With you, even the ordinary becomes meaningful. My heart feels at peace, not because of
+              life, but because of us.
+            </p>
+            <img src="assets/IMG_5105.JPG" alt="After us" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section promises-section">
+        <div class="section-header">
+          <span class="tag">OUR PROMISE</span>
+          <h2>What I promise you, always</h2>
+        </div>
+
+        <div class="promise-grid">
+          <div class="promise-card">
+            <span class="promise-icon">💍</span>
+            <h3>I choose you</h3>
+            <p>In every season, every chapter, and every dream, I will keep choosing you.</p>
+          </div>
+
+          <div class="promise-card">
+            <span class="promise-icon">🌙</span>
+            <h3>I will love you softly</h3>
+            <p>I will hold your heart with gentleness, patience, and the kind of love that stays.</p>
+          </div>
+
+          <div class="promise-card">
+            <span class="promise-icon">✨</span>
+            <h3>I’ll always come home to you</h3>
+            <p>No matter where life takes us, the safest place I want to be is with you.</p>
+          </div>
+        </div>
+      </section>
+
+      <button id="secret-note-btn" class="secret-note-btn" aria-label="Open a private love note">
+        <span>💌</span>
+        My Little Secret
+      </button>
+
+      <div id="secret-note-modal" class="secret-note-overlay hidden-note">
+        <div class="secret-note-card">
+          <button id="close-secret-note" class="close-secret-note" aria-label="Close secret note">
+            ✕
+          </button>
+          <span class="tag">FOR MEDHA</span>
+          <h3>My darling,</h3>
+          <p>
+            I still fall for you in the quietest ways — the sound of your laughter, the warmth of your
+            presence, and the peace I feel just by being near you. Loving you was the best decision I
+            have ever made, and I will keep choosing this love every day of my life.
+          </p>
+          <p>Forever and always, with all my love.</p>
+        </div>
+      </div>
+
+      <div id="love-letter-modal" class="love-letter-overlay hidden-letter" aria-hidden="true">
+        <div class="letter-stage">
+          <button id="close-love-letter" class="close-letter" aria-label="Close love letter">✕</button>
+          <div class="vintage-envelope" aria-hidden="true">
+            <div class="envelope-flap"></div>
+            <div class="envelope-paper"></div>
+            <span class="envelope-seal">♥</span>
+          </div>
+          <article class="vintage-letter">
+            <span class="letter-date">A little note from my heart</span>
+            <h2>My Dearest Medha,</h2>
+            <p>
+              If I could place every beautiful memory we share into an envelope, it still would not
+              hold how much you mean to me.
+            </p>
+            <p>
+              You make my ordinary days feel golden. Your smile is my favorite light, your heart is
+              my safest home, and loving you is the sweetest part of my life.
+            </p>
+            <p>
+              On your birthday, I want you to know that I will keep choosing you — in every season,
+              every adventure, and every quiet moment in between.
+            </p>
+            <p class="letter-closing">Forever yours,<br /><strong>Zafar</strong></p>
+          </article>
+        </div>
+      </div>
+
+      <section class="section favorites-section">
+        <div class="section-header">
+          <span class="tag">FAVORITES</span>
+          <h2>Everything I adore about you</h2>
+        </div>
+
+        <div class="favorite-grid">
+          <div class="favorite-card">
+            <span class="favorite-icon">✨</span>
+            <h3>Your Smile</h3>
+            <p>The kind of smile that makes my whole world softer.</p>
+          </div>
+          <div class="favorite-card">
+            <span class="favorite-icon">💛</span>
+            <h3>Your Heart</h3>
+            <p>So warm, so kind, and so deeply beautiful.</p>
+          </div>
+          <div class="favorite-card">
+            <span class="favorite-icon">🌙</span>
+            <h3>Your Peace</h3>
+            <p>You are my calm in the middle of every storm.</p>
+          </div>
+          <div class="favorite-card">
+            <span class="favorite-icon">💬</span>
+            <h3>Your Voice</h3>
+            <p>Even a simple conversation with you feels like home.</p>
+          </div>
+          <div class="favorite-card">
+            <span class="favorite-icon">🫶</span>
+            <h3>Your Love</h3>
+            <p>The way you love makes ordinary moments feel extraordinary.</p>
+          </div>
+          <div class="favorite-card">
+            <span class="favorite-icon">🌷</span>
+            <h3>Your Presence</h3>
+            <p>Being near you feels like peace, joy, and forever all at once.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section firsts-section">
+        <div class="section-header">
+          <span class="tag">OUR FIRSTS</span>
+          <h2>Little moments, big love</h2>
+        </div>
+
+        <div class="firsts-list">
+          <div class="first-item">
+            <span class="first-year">First Hello</span>
+            <p>The moment everything began to feel different.</p>
+          </div>
+          <div class="first-item">
+            <span class="first-year">First Date</span>
+            <p>The day my heart quietly decided you were the one.</p>
+          </div>
+          <div class="first-item">
+            <span class="first-year">First Memory</span>
+            <p>The first time I realized I wanted forever with you.</p>
+          </div>
+          <div class="first-item">
+            <span class="first-year">Today</span>
+            <p>And my love for you keeps growing every single day.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section quote-section">
+        <div class="quote-banner">
+          <p>“I keep falling in love with you in new ways every day.”</p>
+        </div>
+      </section>
+
+      <section class="section love-notes-section">
+        <div class="section-header">
+          <span class="tag">WHY I LOVE YOU</span>
+          <h2>Everything Beautiful About You</h2>
+          <p class="section-subtext">Tap any card to reveal my heart</p>
+        </div>
+
+        <div class="flip-grid">
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <span class="heart-icon">💗</span>
+                <h3>Your Smile</h3>
+                <p class="tap-hint">Tap to reveal</p>
+              </div>
+              <div class="flip-back">
+                <p>
+                  Your smile makes my world lighter. It is the kind of smile that makes ordinary days
+                  feel magical.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <span class="heart-icon">🌷</span>
+                <h3>Your Heart</h3>
+                <p class="tap-hint">Tap to reveal</p>
+              </div>
+              <div class="flip-back">
+                <p>
+                  Your heart is pure, warm, and kind. You love with so much depth that even my quiet
+                  moments feel seen by you.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <span class="heart-icon">💫</span>
+                <h3>Our Love</h3>
+                <p class="tap-hint">Tap to reveal</p>
+              </div>
+              <div class="flip-back">
+                <p>
+                  Loving you feels like home, like peace, like the gentlest form of magic I have ever
+                  known.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section letter-section">
+        <div class="parchment">
+          <h2>My Dear Medha,</h2>
+          <p>
+            Happy Birthday, my love. You are the most beautiful dream I ever let myself believe in.
+            Until I found you, I didn’t know my heart could feel this full, this calm, and this alive.
+            Loving you was the best decision I have ever made.
+          </p>
+          <p>
+            Every day with you is a gift. Thank you for making my life softer, brighter, and endlessly
+            more meaningful. I love the way you make my world feel like home, and I will always be
+            grateful for the day our story began on July 27.
+          </p>
+          <p>
+            Happy Birthday to the woman I adore, the girl who stole my heart, and the love I’ll carry
+            in every chapter of my life. I love you more than words can say, and I will keep choosing
+            you, forever.
+          </p>
+          <div class="signature">
+            <p>Forever yours,</p>
+            <span>Zafar</span>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>Made with love for Medha • 15 October 2026</p>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
