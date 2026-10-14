@@ -66,25 +66,6 @@ function createFloatingHearts() {
   }
 }
 
-function createBalloons() {
-  const container = document.querySelector('.balloon-layer');
-  if (!container) return;
-
-  const colors = ['#f472b6', '#f9d77e', '#fca5a5', '#fbbf24', '#f9a8d4'];
-
-  for (let i = 0; i < 12; i += 1) {
-    const balloon = document.createElement('span');
-    balloon.className = 'balloon';
-    balloon.style.left = `${Math.random() * 100}%`;
-    balloon.style.top = `${Math.random() * 18}%`;
-    balloon.style.background = `linear-gradient(135deg, ${colors[i % colors.length]}, rgba(255,255,255,0.28))`;
-    balloon.style.transform = `scale(${0.7 + Math.random() * 0.8})`;
-    balloon.style.animationDelay = `${(Math.random() * 8).toFixed(2)}s`;
-    balloon.style.animationDuration = `${12 + Math.random() * 10}s`;
-    container.appendChild(balloon);
-  }
-}
-
 function playMp3IfAvailable() {
   if (!audioEl) return Promise.resolve(false);
 
@@ -242,7 +223,6 @@ const closeLoveLetter = document.getElementById('close-love-letter');
 
 createRosePetals();
 createFloatingHearts();
-createBalloons();
 
 if (secretNoteBtn && secretNoteModal) {
   secretNoteBtn.addEventListener('click', () => {
